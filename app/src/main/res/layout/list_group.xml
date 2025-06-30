@@ -9,4 +9,4 @@
     android:paddingEnd="16dp"
     android:textSize="18sp"
     android:textStyle="bold"
-    android:background="@color/white" />
+    android:background="@color/colorWhite" />
