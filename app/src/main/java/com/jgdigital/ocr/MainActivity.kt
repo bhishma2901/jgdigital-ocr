@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import java.io.File
+import android.graphics.Bitmap
 
 class MainActivity : AppCompatActivity() {
     private fun updateImagePreviews() {
@@ -93,6 +94,14 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "No TXT file selected", Toast.LENGTH_SHORT).show()
             }
         }
+        findViewById<Button>(R.id.btn_select_txt_file).setOnClickListener {
+            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+            intent.addCategory(Intent.CATEGORY_OPENABLE)
+            intent.type = "text/plain"
+            startActivityForResult(intent, PICK_TXT_CODE)
+        }
+    }
+
     private fun batchCropImages() {
         // This is a simple synchronous implementation for demonstration. In production, use background threads.
         val croppedUris = mutableListOf<Uri>()
@@ -167,13 +176,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         Toast.makeText(this, "TXT fix done. Output: ${file.absolutePath}", Toast.LENGTH_LONG).show()
-    }
-        findViewById<Button>(R.id.btn_select_txt_file).setOnClickListener {
-            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
-            intent.addCategory(Intent.CATEGORY_OPENABLE)
-            intent.type = "text/plain"
-            startActivityForResult(intent, PICK_TXT_CODE)
-        }
     }
 
     private fun prepareListData() {

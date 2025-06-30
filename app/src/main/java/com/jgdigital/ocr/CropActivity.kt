@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.yalantis.ucrop.UCrop
-import com.yalantis.ucrop.UCropView
+import com.yalantis.ucrop.view.UCropView
+import android.content.Intent
 import java.io.File
 
 class CropActivity : AppCompatActivity() {
