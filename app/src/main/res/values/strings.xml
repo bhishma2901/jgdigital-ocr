@@ -9,7 +9,7 @@
     <string name="output_file_name">Output File Name</string>
     <string name="fix_txt_file">Fix TXT File</string>
     <string name="select_txt_file">Select TXT File</string>
-    <string name="extract_all">Extract All (Text & Numbers)</string>
+    <string name="extract_all">Extract All (Text &amp; Numbers)</string>
     <string name="extract_text_only">Extract Only Text</string>
     <string name="extract_numbers_only">Extract Only Numbers</string>
     <string name="extract_7plus_digits">Extract 7+ Digit Numbers</string>
