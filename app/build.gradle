@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
 }
 android {
+    namespace 'com.jgdigital.ocr'
     compileSdk 34
     defaultConfig {
         applicationId "com.jgdigital.ocr"
