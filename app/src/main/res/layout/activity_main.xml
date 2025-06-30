@@ -1,35 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/btnSelectFolder"
+    android:background="#F5F5F5">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Upload Folder with Images" />
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <Button
-        android:id="@+id/btnSelectZip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Upload ZIP File" />
 
-    <ExpandableListView
-        android:id="@+id/expandableListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JG Digital OCR"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp" />
 
-    <Button
-        android:id="@+id/btnSelectTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Fix TXT File (Extract 7+ digit numbers)" />
-</LinearLayout>
+
+        <Button
+            android:id="@+id/btn_upload_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_images"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="8dp"
+            android:drawableStart="@drawable/ic_image_preview"
+            android:iconPadding="8dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible">
+            <LinearLayout
+                android:id="@+id/image_preview_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" />
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btn_upload_zip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_zip"
+            android:backgroundTint="#1976D2"
+            android:textColor="#fff"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extraction Options"
+            android:textStyle="bold"
+            android:textColor="#444"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
+        <ExpandableListView
+            android:id="@+id/expandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:divider="#BDBDBD"
+            android:dividerHeight="1dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_crop_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/crop_image"
+            android:backgroundTint="#388E3C"
+            android:textColor="#fff"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btn_apply_crop_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/apply_crop_all"
+            android:backgroundTint="#388E3C"
+            android:textColor="#fff"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btn_extract_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/extract_text"
+            android:backgroundTint="#FBC02D"
+            android:textColor="#222"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/et_output_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/output_path"
+            android:background="#fff"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_output_file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/output_file_name"
+            android:background="#fff"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_fix_txt_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fix_txt_file"
+            android:backgroundTint="#D32F2F"
+            android:textColor="#fff"
+            android:layout_marginBottom="8dp" />
+
+
+        <Button
+            android:id="@+id/btn_select_txt_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_txt_file"
+            android:backgroundTint="#D32F2F"
+            android:textColor="#fff"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>

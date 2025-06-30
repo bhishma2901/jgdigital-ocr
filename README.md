@@ -1,1 +1,0 @@
-# jgdigital-ocr

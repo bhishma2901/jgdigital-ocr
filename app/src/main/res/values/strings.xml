@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">JG Digital OCR</string>
+    <string name="upload_images">Upload Images</string>
+    <string name="upload_zip">Upload ZIP</string>
+    <string name="crop_image">Crop Image</string>
+    <string name="apply_crop_all">Apply Crop to All</string>
+    <string name="extract_text">Extract Text</string>
+    <string name="output_path">Select Output Path</string>
+    <string name="output_file_name">Output File Name</string>
+    <string name="fix_txt_file">Fix TXT File</string>
+    <string name="select_txt_file">Select TXT File</string>
+    <string name="extract_all">Extract All (Text & Numbers)</string>
+    <string name="extract_text_only">Extract Only Text</string>
+    <string name="extract_numbers_only">Extract Only Numbers</string>
+    <string name="extract_7plus_digits">Extract 7+ Digit Numbers</string>
+    <string name="more_options">More Options</string>
 </resources>
